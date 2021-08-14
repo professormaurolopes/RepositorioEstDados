@@ -22,10 +22,12 @@ int main()
 
     do{
         system("cls");
+        printf("***************** MENU *****************\n");
         printf("1 - INSERIR PROFESSOR NA LISTA\n");
         printf("2 - LISTAR PROFESSORES DA LISTA\n");
         printf("3 - BUSCAR PROFESSOR (POR NOME) NA LISTA\n");
         printf("4 - SAIR DA APLICACAO\n");
+        printf("****************************************\n\n");
         printf("ESCOLHA UMA OPCAO:");
         scanf("%c",&opcao);
         fflush(stdin);
