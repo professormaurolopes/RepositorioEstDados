@@ -7,7 +7,7 @@ Temos vários projetos aqui, você encontrará projetos desenvolvidos pelo Profe
 ## ListaProfessores
 
 Neste projeto desenvolvido em nossa aula extra do dia 14/08/2021, implementamos uma lista sequencial que permitiu aos alunos perceber as ações básicas de um Lista:
-Inserção
-Listagem
-Busca
-Remoção** (Não trabalhamos a remoção aqui, pois ela será vista na implementação da lista encadeada).
+- Inserção
+- Listagem
+- Busca
+- Remoção** (Não trabalhamos a remoção aqui, pois ela será vista na implementação da lista encadeada).
