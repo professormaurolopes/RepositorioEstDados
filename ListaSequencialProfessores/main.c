@@ -13,12 +13,13 @@ typedef struct{
 Professor listadeProfessores[TAM_MAX];
 void inserirnaLista(Professor item,int *indice);
 void listardaLista(int indice);
+int buscarnaLista(Professor item,int indice);
 
 int main()
 {
     char opcao;
     Professor item;
-    int indice = 0;
+    int indice = 0,encontrou=0;
 
     do{
         system("cls");
@@ -57,6 +58,15 @@ int main()
                 break;
             case '3':
                 printf("ESCOLHEU BUSCAR PROFESSOR\n");
+                printf("Informe o nome do Professor a pesquisar:");
+                fgets(item.nome,60,stdin);
+                encontrou = buscarnaLista(item,indice);
+                if(encontrou == 1){
+                    printf("Professor Localizado!!!\n");
+                }
+                else{
+                    printf("Professor NAO Localizado!!!\n");
+                }
                 system("pause");
                 break;
             case '4':
@@ -83,4 +93,15 @@ void listardaLista(int indice){
         printf("E-mail do Professor:%s\n",listadeProfessores[i].email);
         printf("*****************************************\n");
     }
+}
+
+int buscarnaLista(Professor item,int indice){
+    int encontrou = 0;
+    for(int i=0;i<indice;i++){
+        if(strncmp(item.nome,listadeProfessores[i].nome,60)==0){
+            encontrou = 1;
+            break;
+        }
+    }
+    return encontrou;
 }
