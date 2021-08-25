@@ -4,6 +4,17 @@ Temos vários projetos aqui, você encontrará projetos desenvolvidos pelo Profe
 
 # Projetos
 
+## ListaEncadeadaAlunos
+
+Neste projeto desenvolvido em nossa aula sobre a implementação de uma Lista Encadeada a partir do dia 25/08/2021, iremos demonstrar os elementos que fazem parte da construção de uma lista encadeada. O objetivo é criar uma aplicação que permita: cadastrar alunos, listar os alunos cadastrados e realizar a busca através do nome do aluno para descobrir se o mesmo se encontra na lista cadastrada. Aqui iremos trabalhar: 
+- O conceito de Nó (DADO + PONTEIRO PARA O PRÓXIMO NÓ).
+- A criação da parte DADO
+- A criação da parte PONTEIRO PARA O PRÓXIMO NÓ
+- Alocação Dinâmica de um Nó
+- Encadeamento de um Nó a outro Nó
+- Listagem dos Alunos armazenados na Lista Encadeada
+- Busca por um Aluno na Lista Encadeada 
+
 ## ListaSequencialProfessores
 
 Neste projeto desenvolvido em nossa aula extra do dia 14/08/2021, implementamos uma lista sequencial que permitiu aos alunos rever as ações básicas de um Lista:
