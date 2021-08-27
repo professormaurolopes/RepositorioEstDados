@@ -17,6 +17,22 @@ int main()
 {
     //Declaração de uma variável aluno
     Aluno meualuno;
+    int valor;
+    //Criar um ponteiro para o tipo de dado que eu quero armazenar
+    No *novoNo;
+
+    //Preciso Alocar Memória
+    //Chamar malloc
+    //Malloc retorna um void *
+    novoNo = (No *) malloc(sizeof(No));
+    if (novoNo == NULL){
+        printf("Alocaco deu errado!!!");
+    }
+    else{
+        printf("Alocacao deu certo!!!");
+        novoNo->aluno
+        novoNo->proximo
+    }
 
 
 
