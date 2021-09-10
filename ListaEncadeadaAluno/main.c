@@ -20,6 +20,7 @@ int main()
     int valor;
     //Criar um ponteiro para o tipo de dado que eu quero armazenar
     No *novoNo;
+    No *novoNo2;
 
     //Preciso Alocar Memória
     //Chamar malloc
@@ -29,21 +30,36 @@ int main()
         printf("Alocaco deu errado!!!");
     }
     else{
-        printf("Alocacao deu certo!!!");
-        novoNo->aluno
-        novoNo->proximo
+        printf("Informe a matricula do Aluno:");
+        scanf("%d",&meualuno.matricula);
+        fflush(stdin);
+        printf("Informe o nome do Aluno:");
+        fgets(meualuno.nome,60,stdin);
+        //printf("Matricula:%d\nNome:%s",meualuno.matricula,meualuno.nome);
+        novoNo->aluno = meualuno;
+        novoNo->proximo = NULL;
+    }
+    novoNo2 = (No *) malloc(sizeof(No));
+    if (novoNo2 == NULL){
+        printf("Nao deu certo a alocacao!!!");
+    }
+    else{
+        printf("Informe a matricula do Aluno:");
+        scanf("%d",&meualuno.matricula);
+        fflush(stdin);
+        printf("Informe o nome do Aluno:");
+        fgets(meualuno.nome,60,stdin);
+        //printf("Matricula:%d\nNome:%s",meualuno.matricula,meualuno.nome);
+        novoNo2->aluno = meualuno;
+        novoNo2->proximo = NULL;
+        novoNo->proximo = novoNo2;
     }
 
 
 
 
 
-    printf("Informe a matricula do Aluno:");
-    scanf("%d",&meualuno.matricula);
-    fflush(stdin);
-    printf("Informe o nome do Aluno:");
-    fgets(meualuno.nome,60,stdin);
-    printf("Matricula:%d\nNome:%s",meualuno.matricula,meualuno.nome);
+
 
     return 0;
 }
