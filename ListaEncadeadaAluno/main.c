@@ -13,53 +13,77 @@ typedef struct{
     struct No *proximo;
 }No;
 
+//Funções
+No * criaNo(Aluno aluno);
+
+//Ponteiros usados na manipulação da Lista Encadeada
+No *inicio = NULL;
+No *fim = NULL;
+
 int main()
 {
     //Declaração de uma variável aluno
     Aluno meualuno;
-    int valor;
-    //Criar um ponteiro para o tipo de dado que eu quero armazenar
-    No *novoNo;
-    No *novoNo2;
+    char opcao;
+    No *resultado;
 
-    //Preciso Alocar Memória
-    //Chamar malloc
-    //Malloc retorna um void *
-    novoNo = (No *) malloc(sizeof(No));
-    if (novoNo == NULL){
-        printf("Alocaco deu errado!!!");
-    }
-    else{
-        printf("Informe a matricula do Aluno:");
-        scanf("%d",&meualuno.matricula);
-        fflush(stdin);
-        printf("Informe o nome do Aluno:");
-        fgets(meualuno.nome,60,stdin);
-        //printf("Matricula:%d\nNome:%s",meualuno.matricula,meualuno.nome);
-        novoNo->aluno = meualuno;
-        novoNo->proximo = NULL;
-    }
-    novoNo2 = (No *) malloc(sizeof(No));
-    if (novoNo2 == NULL){
-        printf("Nao deu certo a alocacao!!!");
-    }
-    else{
-        printf("Informe a matricula do Aluno:");
-        scanf("%d",&meualuno.matricula);
-        fflush(stdin);
-        printf("Informe o nome do Aluno:");
-        fgets(meualuno.nome,60,stdin);
-        //printf("Matricula:%d\nNome:%s",meualuno.matricula,meualuno.nome);
-        novoNo2->aluno = meualuno;
-        novoNo2->proximo = NULL;
-        novoNo->proximo = novoNo2;
-    }
-
-
-
-
-
-
+    do{
+        system("cls");
+        printf("Escolha uma opcao:\n");
+        printf("1 - INSERIR UM ALUNO || 2 - SAIR\n");
+        opcao = getchar();
+        switch(opcao){
+        case '1':
+            //Insercao de um aluno
+            printf("Informe a matricula do Aluno:");
+            scanf("%d",&meualuno.matricula);
+            fflush(stdin);
+            printf("Informe o nome do Aluno:");
+            fgets(meualuno.nome,60,stdin);
+            resultado = criaNo(meualuno);
+            if (resultado == NULL){
+                printf("A criacao do No não foi possível");
+            }
+            else{
+                printf("Deu certo a criacao do No");
+            }
+            system("pause");
+            break;
+        case '2':
+            //Sair da aplicacao
+            printf("saindo...");
+            break;
+        }
+    }while(opcao != '2');
 
     return 0;
+}
+
+No * criaNo(Aluno aluno){
+    No *novo;
+
+    //Alocar memória para um Nó
+    novo = (No *) malloc(sizeof(No));
+    //Testar se a alocação funcionou
+    if (novo == NULL){
+        //Caso a alocação não funcione devo informar ao usuário
+        //A alocacao não foi possível
+        return NULL;
+    }
+    else{
+        //Caso a alocação funcione eu devo fazer duas ações:
+        //incluir o aluno na parte dado
+        //fazer o proximo apontar para nulo
+        novo->aluno = aluno;
+        novo->proximo = NULL;
+        if (inicio == NULL){
+            inicio = novo;
+            fim = novo;
+        }
+        else{
+            fim->proximo = novo;
+            fim = novo;
+        }
+        return novo;
+    }
 }
