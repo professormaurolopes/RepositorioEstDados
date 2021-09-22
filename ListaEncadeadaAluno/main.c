@@ -19,6 +19,7 @@ int listavazia();
 void primeiroNo(No *ptrNo);
 void insereFim(No *ptrNo);
 void imprimir();
+int buscarporAluno(char nomebusca[60]);
 
 //Ponteiros usados na manipulação da Lista Encadeada
 No *inicio = NULL;
@@ -28,8 +29,9 @@ int main()
 {
     //Declaração de uma variável aluno
     Aluno meualuno;
-    char opcao;
+    char opcao, nomeLocalizar[60];
     No *novoNo;
+    int resultado;
 
     do{
         system("cls");
@@ -69,8 +71,22 @@ int main()
             getche();
             break;
         case '3':
-            //Sair da aplicacao
-            printf("buscar...");
+            //Buscar por um Aluno
+            if (listavazia()){
+                printf("Lista Vazia. Busca nao pode ser realizada.\n");
+            }
+            else{
+                fflush(stdin);
+                printf("Informe o nome do Aluno a ser Localizado:");
+                fgets(nomeLocalizar,60,stdin);
+                resultado = buscarporAluno(nomeLocalizar);
+                if (resultado){
+                    printf("Nome informado, foi Localizado\n");
+                }
+                else{
+                    printf("Nome informado, NAO foi Localizado\n");
+                }
+            }
             getche();
             break;
         case '4':
@@ -137,4 +153,18 @@ void imprimir(){
         printf("Nome:%s",percorre->aluno.nome);
         percorre = percorre->proximo;
     }
+}
+
+int buscarporAluno(char nomebusca[60]){
+    No *percorre;
+
+    //O ponteiro "inicio" é usado para navegarmos em nossa Lista
+    percorre = inicio;
+    while (percorre != NULL){
+        if (strncmp(percorre->aluno.nome,nomebusca,60) == 0){
+            return 1;
+        }
+        percorre = percorre->proximo;
+    }
+    return 0;
 }

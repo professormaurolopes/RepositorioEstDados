@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1631888318 source:c:\users\mauro lopes\documents\repositorioestdados\listaencadeadaaluno\main.c
+	<stdio.h>
+	<stdlib.h>
+
