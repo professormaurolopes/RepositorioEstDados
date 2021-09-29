@@ -6,7 +6,7 @@ Temos vários projetos aqui, você encontrará projetos desenvolvidos pelo Profe
 
 ## PilhadeAcoes
 
-Neste projeto desenvolvido em nossa aula sobre a implementação de uma Pilha Encadeada a partir do dia 25/08/2021, iremos demonstrar os elementos que fazem parte da construção de uma pilha encadeada. Conceitos como: o ponteiro topo, a criação do Nó, a "dança dos ponteiros", tudo isso será apresentado de forma que o aluno possa compreender na prática os elementos teóricos apresentados nos slides. O objetivo é criar uma aplicação que permita: empilhar ações que são realizadas em uma ferramenta de desenhos, executar a operação CTRL+Z, e desta forma desempilhar as últimas ações. Aqui iremos trabalhar: 
+Neste projeto desenvolvido em nossa aula sobre a implementação de uma Pilha Encadeada a partir do dia 24/09/2021, iremos demonstrar os elementos que fazem parte da construção de uma pilha encadeada. Conceitos como: o ponteiro topo, a criação do Nó, a "dança dos ponteiros", tudo isso será apresentado de forma que o aluno possa compreender na prática os elementos teóricos apresentados nos slides. O objetivo é criar uma aplicação que permita: empilhar ações que são realizadas em uma ferramenta de desenhos, executar a operação CTRL+Z, e desta forma desempilhar as últimas ações. Aqui iremos trabalhar: 
 - O conceito de Nó (DADO + PONTEIRO PARA O PRÓXIMO NÓ).
 - A criação da parte DADO
 - A criação da parte PONTEIRO PARA O PRÓXIMO NÓ
