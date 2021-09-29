@@ -10,9 +10,23 @@ typedef struct{
     struct No *proximo;
 }No;
 
+//Criacao do ponteiro topo
+No *topo;
+
+//Funcoes
+No * criaNo(Acao acaoparametro);
+int push(Acao acao);
+int isEmpty();
+Acao pop();
+
+
 int main()
 {
-    char opcao;
+    char op;
+    int resultado;
+    Acao minhaacao;
+    //Pilha Vazia
+    topo = NULL;
 
     do{
         system("cls");
@@ -21,10 +35,22 @@ int main()
         op = getchar();
         switch(op){
             case '1':
+                fflush(stdin);
                 //Inserir Acao (Empilhar)
+                printf("Informe a acao:\n");
+                fgets(minhaacao.acaoexecutada,100,stdin);
+                resultado = push(minhaacao);
+                if (resultado == 1){
+                    printf("Acao empilhada com sucesso.");
+                }
+                else{
+                    printf("Nao foi possivel empilhar a acao.");
+                }
+                getche();
                 break;
             case '2':
                 //Remover Acao (Desempilhar)
+                getche();
                 break;
             case '3':
                 printf("saindo....");
@@ -49,10 +75,38 @@ No * criaNo(Acao acaoparametro){
     return novo;
 }
 
-void push(Acao acao){
+int push(Acao acao){
+    No *ptrnovo;
 
+    ptrnovo = criaNo(acao);
+    if (ptrnovo == NULL){
+        //A função criaNo não conseguiu alocar memória
+        //Logo não poderemos empilhar uma ação
+        return 0;
+    }
+    else{
+        if(isEmpty()){
+            //Empilhando quando a Pilha esta vazia
+            topo = ptrnovo;
+        }
+        else{
+            //Empilhando quando a Pilha não está vazia
+            ptrnovo->proximo = topo;
+            topo = ptrnovo;
+        }
+        return 1;
+    }
 }
 
 Acao pop(){
 
+}
+
+int isEmpty(){
+    if (topo == NULL){
+        return 1;
+    }
+    else{
+        return 0;
+    }
 }
