@@ -50,6 +50,13 @@ int main()
                 break;
             case '2':
                 //Remover Acao (Desempilhar)
+                if (isEmpty()){
+                    printf("A Pilha de acoes esta vazia. Nada a desempilhar!!!");
+                }
+                else{
+                    minhaacao = pop();
+                    printf("CTRL+Z:%s",minhaacao.acaoexecutada);
+                }
                 getche();
                 break;
             case '3':
@@ -99,6 +106,13 @@ int push(Acao acao){
 }
 
 Acao pop(){
+    Acao acao;
+    //recuperando o conteúdo do Nó
+    acao = topo->acao;
+    //Indicar o novo topo
+    topo = topo->proximo;
+
+    return acao;
 
 }
 
