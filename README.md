@@ -4,6 +4,20 @@ Temos vários projetos aqui, você encontrará projetos desenvolvidos pelo Profe
 
 # Projetos
 
+## FiladeImpressao
+
+Neste projeto desenvolvido em nossa aula sobre a implementação de uma Fila Encadeada a partir do dia 06/10/2021, iremos demonstrar os elementos que fazem parte da construção de uma fila encadeada. Conceitos como: os ponteiros inicio e fim, a criação do Nó, a "dança dos ponteiros",etc. Tudo isso será apresentado de forma que o aluno possa compreender na prática os elementos teóricos apresentados nos slides. O objetivo é criar uma aplicação que simule uma Fila de Impressão de Arquivos de uma impressora qualquer. Desta forma a aplicação permitirá: simular o envio de um arquivo para impressora (emfileirar um arquivo na Fila de Impressão), simular a impressão do arquivo (desenfileirar o arquivo da Fila de Impressão) e listar os arquivos da Fila de Impressão. Aqui iremos trabalhar: 
+- O conceito de Nó (DADO + PONTEIRO PARA O PRÓXIMO NÓ).
+- A criação da parte DADO (Um Arquivo será representado por seu nome e quantidade de páginas)
+- A criação da parte PONTEIRO PARA O PRÓXIMO NÓ
+- Criar os ponteiros inicio e fim, e explanar sua utilização
+- Alocação Dinâmica de um Nó através da criação da função criaNo()
+- Implementação da função enqueue() para o enfileiramento de arquivos na Fila de Impressão
+- Implementação da função isEmpty()
+- Implementação da função dequeue() para desenfileirar um arquivo da Fila de Impressão 
+- Implementar uma função que mostre os arquivos contidos na Fila de Impressão (NÃO É UMA OPERAÇÃO BÁSICA DA FILA)
+
+
 ## PilhadeAcoes
 
 Neste projeto desenvolvido em nossa aula sobre a implementação de uma Pilha Encadeada a partir do dia 24/09/2021, iremos demonstrar os elementos que fazem parte da construção de uma pilha encadeada. Conceitos como: o ponteiro topo, a criação do Nó, a "dança dos ponteiros", tudo isso será apresentado de forma que o aluno possa compreender na prática os elementos teóricos apresentados nos slides. O objetivo é criar uma aplicação que permita: empilhar ações que são realizadas em uma ferramenta de desenhos, executar a operação CTRL+Z, e desta forma desempilhar as últimas ações. Aqui iremos trabalhar: 
