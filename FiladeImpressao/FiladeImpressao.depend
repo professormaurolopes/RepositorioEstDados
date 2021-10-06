@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1633525678 source:c:\users\mauro lopes\documents\repositorioestdados\filadeimpressao\main.c
+	<stdio.h>
+	<stdlib.h>
+
